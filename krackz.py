@@ -21,8 +21,8 @@ def main():
         wordlist = sys.argv[2]
         crack(filename, wordlist)
     except:
-        print("\nUsage: python krack.py <file> <wordlist>\n")
-        print("Example: python krack.py secret.zip wordlist.txt\n")
+        print("\nUsage: python krackz.py <file> <wordlist>\n")
+        print("Example: python krackz.py secret.zip wordlist.txt\n")
 
 
 if __name__ == "__main__":
