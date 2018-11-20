@@ -1,18 +1,19 @@
 import sys
-import zipfile 
- 
-def crack(x,y):
-    password = None 
-    file_to_open = zipfile.ZipFile(x) 
-    with open(y, 'r') as f: 
-        for line in f.readlines(): 
-            password = line.strip('\n') 
-            try: 
-               file_to_open.extractall(pwd=password) 
-               password = 'Password found: %s' % password 
-               print password 
-            except: 
-                pass 
+import zipfile
+
+
+def crack(x, y):
+    password = None
+    file_to_open = zipfile.ZipFile(x)
+    with open(y, 'r') as f:
+        for line in f.readlines():
+            password = line.strip('\n')
+            try:
+                file_to_open.extractall(pwd=password)
+                password = ('Password found: %s' % password)
+                print(password)
+            except:
+                pass
 
 
 def main():
